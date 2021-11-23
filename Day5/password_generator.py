@@ -12,14 +12,18 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 password = ""
 
+# Give the amount of random letters specified
 for letter in range (0, nr_letters) :
     password += str(random.choice(letters))
 
+# Give the amount of random symbols specified
 for symbol in range (0, nr_symbols) :
     password += str(random.choice(symbols))
 
+# Give the amount of random numbers specified
 for number in range (0, nr_numbers) :
     password += str(random.choice(numbers))
 
+# Scrambling all of the characters randomly to exponentially increase complexity of the generated password
 random_password = ''.join(random.sample(password, len(password)))
 print(random_password)
